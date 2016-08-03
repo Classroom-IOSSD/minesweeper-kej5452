@@ -252,7 +252,7 @@ int main(int argc, char *argv[]) {
 
 				for (j = 0; j < 8; j++) {
 					value = table_array[rows[j]][columns[j]];
-					bool isValid = (rows[i] >= 0 && rows[i] < MAX) && (columns[i] >= 0 && columns[i] < MAX);
+					bool isValid = (rows[j] >= 0 && rows[j] < MAX) && (columns[j] >= 0 && columns[j] < MAX);
 					if (isValid) {	// to prevent negative index and out of bounds
 						if (!has_mine(table_array[row][col]))																// to prevent remove mines
 							table_array[rows[j]][columns[j]] += 1;									// sums 1 to each adjacent cell
